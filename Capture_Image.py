@@ -7,6 +7,7 @@ import os.path
 # counting the numbers
 
 
+
 def is_number(s):
     try:
         float(s)
@@ -63,13 +64,13 @@ def takeImages():
         res = "Images Saved for ID : " + Id + " Name : " + name
         header=["Id", "Name"]
         row = [Id, name]
-        if(os.path.isfile("StudentDetails"+os.sep+"StudentDetails.csv")):
-            with open("StudentDetails"+os.sep+"StudentDetails.csv", 'a+') as csvFile:
+        if(os.path.isfile("EmployeeDetails"+os.sep+"EmployeeDetails.csv")):
+            with open("EmployeeDetails"+os.sep+"EmployeeDetails.csv", 'a+') as csvFile:
                 writer = csv.writer(csvFile)
                 writer.writerow(j for j in row)
             csvFile.close()
         else:
-            with open("StudentDetails"+os.sep+"StudentDetails.csv", 'a+') as csvFile:
+            with open("EmployeeDetails"+os.sep+"EmployeeDetails.csv", 'a+') as csvFile:
                 writer = csv.writer(csvFile)
                 writer.writerow(i for i in header)
                 writer.writerow(j for j in row)
